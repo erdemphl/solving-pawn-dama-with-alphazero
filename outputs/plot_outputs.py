@@ -509,33 +509,35 @@ losses = re.findall(pattern, data)
 loss_pi = [float(pi) for pi, _ in losses]
 loss_v = [float(v) for _, v in losses]
 
+plt.rcParams['font.weight'] = 'bold'
+
 # Plotting Loss_pi
 plt.figure(figsize=(10, 5))
 plt.plot(loss_pi, label='Loss_pi', marker=',')
-plt.title('Loss_pi over Epochs')
-plt.xlabel('Epoch')
-plt.ylabel('Loss_pi')
+plt.title('Loss_pi over Epochs', fontweight='bold')
+plt.xlabel('Epoch', fontweight='bold')
+plt.ylabel('Loss_pi', fontweight='bold')
 plt.grid(True)
-plt.legend()
+plt.legend(prop={'weight': 'bold'})
 plt.show()
 
 # Plotting Loss_v
 plt.figure(figsize=(10, 5))
 plt.plot(loss_v, label='Loss_v', marker=',', color='red')
-plt.title('Loss_v over Epochs')
-plt.xlabel('Epoch')
-plt.ylabel('Loss_v')
+plt.title('Loss_v over Epochs', fontweight='bold')
+plt.xlabel('Epoch', fontweight='bold')
+plt.ylabel('Loss_v', fontweight='bold')
 plt.grid(True)
-plt.legend()
+plt.legend(prop={'weight': 'bold'})
 plt.show()
 
 # Plotting Loss_pi and Loss_v on the same graph
 plt.figure(figsize=(10, 5))
 plt.plot(loss_pi, label='Loss_pi', marker=',')
 plt.plot(loss_v, label='Loss_v', marker=',', color='red')
-plt.title('Loss_pi and Loss_v over Epochs')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
+plt.title('Loss_pi and Loss_v over Epochs', fontweight='bold')
+plt.xlabel('Epoch', fontweight='bold')
+plt.ylabel('Loss', fontweight='bold')
 plt.grid(True)
-plt.legend()
+plt.legend(prop={'weight': 'bold'})
 plt.show()
