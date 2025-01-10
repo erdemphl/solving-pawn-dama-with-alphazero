@@ -52,7 +52,7 @@ def board():
     g = Dama(board_size)
     n1 = NNet(g)
     n1.load_checkpoint('./test_models/', models[board_size])
-    args1 = dotdict({'numMCTSSims': 400, 'cpuct': 1})
+    args1 = dotdict({'numMCTSSims': 1000, 'cpuct': 1})
     mcts1 = MCTS(g, n1, args1)
     ai = lambda x: np.argmax(mcts1.getActionProb(x, temp=0))
 
